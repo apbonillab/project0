@@ -24,8 +24,10 @@ module.exports.loginUser = (email, password, success, error) => {
         }
         if(result[0]!=undefined){
             if (result[0].password === password) {
+                let user = result[0].iduser;
+                console.log("es igual"+user);
                 security.generateToken(email).then(function(result){
-                    success(result);
+                    success({'token':result,'user':user});
               });
                 
             }else{
