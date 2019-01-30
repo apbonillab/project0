@@ -40,7 +40,7 @@ module.exports.deleteEvent = (idevent,success,error)=>{
 }
 
 module.exports.showEventByUser = (user,success,error)=>{
-    connection.query(`Select e.place 'place', e.name 'name' , e.address 'address',
+    connection.query(`Select e.idevent 'idevent', e.place 'place', e.name 'name' , e.address 'address',
                     e.init_date 'init_date' , e.end_date 'end_date',
                     e.date_audit 'create_date',
                     u.email 'user', c.name 'category', 
