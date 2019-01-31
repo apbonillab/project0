@@ -1,0 +1,10 @@
+{
+    "db": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "password",
+        "database": "events",
+        "timeoutBeforeReconnection": "10000"
+    },
+    "JWT_SECRET":"access987654"
+}

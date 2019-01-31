@@ -5,7 +5,7 @@
 /dist-server
 /tmp
 /out-tsc
-/config/config.json
+
 
 # dependencies
 /node_modules
