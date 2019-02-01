@@ -8,10 +8,12 @@ const eventsController = require('./app/controllers/events.ctrl.js');
 const generalController = require('./app/controllers/general-list.ctrl.js');
 const port = 8010;
 
-app.listen(port,()=>{
-    console.log('server on port: '+port);
-})
-
+var http = require('http');
+var server = http.createServer(app);
+server.listen(3000, '0.0.0.0');
+server.on('listening', function() {
+    console.log('Express server started on port %s at %s', server.address().port, server.address().address);
+});
 app.options('*', cors());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
